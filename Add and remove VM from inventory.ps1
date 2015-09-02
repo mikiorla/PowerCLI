@@ -1,16 +1,13 @@
 ﻿#http://www.wooditwork.com/2011/08/11/adding-vmx-files-to-vcenter-inventory-with-powercli-gets-even-easier/
 
-
 $powerCLIpssnapin = 'VMware.VimAutomation.Core'
-
+$vServer  = Read-Host 'Enter vCenter server or ESXi host name or IP'
 Add-PSSnapin $powerCLIpssnapin
 Get-PSSnapin $powerCLIpssnapin
 
 Get-Command -Module $powerCLIpssnapin
 
-Get-vm
-
-Connect-VIServer -Server vcentar.ktehnika.local
+Connect-VIServer -Server $vServer
 
 $ESXHost = "esxir900.ktehnika.local"
 
