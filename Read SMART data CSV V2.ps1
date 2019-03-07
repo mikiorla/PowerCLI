@@ -6,7 +6,6 @@ Import-Module VMware.PowerCLI
 $pathToCSV = " ... "
 $date = (Get-Date).DateTime.replace(" ",".").replace(",",".").replace("..",".")
 $hosts = Get-cluster | Get-VMHost | sort Name
-#$hosts = Get-VMHost bvs0002.cms.zz
 $up = "↑"
 $down = "↓"
 foreach ($vmhost in $hosts)
